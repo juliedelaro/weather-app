@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <title>WireFrame</title>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+      <div class="row">
+        <div class="col">
+          <form class ="search">
+            <input type="search" placeholder="Enter a city" id="city" /><input
+              type="submit" class="button-control"
+              value="Go"
+            />
+          </form>
+          </div>
+          <div class="col">
+          <button id="current-location-button">📍Current Location</button>
+          </div>
+        </div>
+        
+        
+      
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+  <div class="card-body">
+        
+          <h1 class="dateTime">Friday, 10:00 in</h1>
+          <span class="citySearch">Humbolt</span>
+          <h2 class="currentTitle">Currently:</h2>
+      <div class="currentWeather">
+ <span id="current-temp">80&deg;</span>
+          <span class="currentEmoji">🌤</span><a href="#" id="farenheit"><sup>F&deg;</a></span><sup>|</sup><a href = "#" id= "celsius"><sup>C&deg;</sup></a></li>
+          </div>
+          <ul class="currentConditions"></ul>
+          <li class="sunny">Mostly Sunny</li>
+          <li>Humidity: <span id="current-humidty">66</span>%</li>
+          <li>Wind Speed: <span id="wind-speed">6</span> mph</li>
+          <li><span id="description"></span></li>
+            </ul>
+        </div>
+  </div></div>
+
+    <div class="col-6">
+      <div class="card">
+        <ul>
+  <div class="card-body">
+   <div class="row">
+    <div class="col"><li class="futureDays">Sat</li><span class="emoji">☀️</span></div>
+    <div class="col"><span class= futureHigh>68&deg;</span><span class="futureLow">/46&deg;</span></div>
+    </div>
+
+     <div class="row">
+    <div class="col"><li class="futureDays">Sun</li><span class="emoji">⛈</span></div>
+    <div class="col"><span class= futureHigh>64&deg;</span><span class="futureLow">/42&deg;</span></div>
+    </div>
+
+     <div class="row">
+    <div class="col"><li class="futureDays">Mon</li><span class="emoji">🌤</span></div>
+    <div class="col"><span class= futureHigh>73&deg;</span><span class="futureLow">/50&deg;</span></div>
+    </div>
+
+     <div class="row">
+    <div class="col"><li class="futureDays">Tue</li><span class="emoji">🌥</span></div>
+    <div class="col"><span class= futureHigh>72&deg;</span><span class="futureLow">/52&deg;</span></div>
+    </div>
+
+     <div class="row">
+    <div class="col"><li class="futureDays">Wed</li><span class="emoji">☀️</span></div>
+    <div class="col"><span class= futureHigh>75&deg;</span><span class="futureLow">/48&deg;</span></div>
+    </div>
+</ul>
+
+</div>
+
+    </section>
+    <script src="src/script.js"></script>
+  </body>
+</html>
