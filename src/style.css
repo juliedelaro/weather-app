@@ -105,10 +105,6 @@ a {
   border: 4px solid #ffe3da;
 }
 
-#description {
-  text-transform: capitalize;
-}
-
 ::placeholder {
   color: #fe7143;
 }
@@ -122,4 +118,8 @@ a {
 #current-location-button {
   border: 2px solid #44a6f5;
   color: #44a6f5;
+}
+
+small {
+  padding-top: 30px;
 }
