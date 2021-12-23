@@ -56,6 +56,14 @@ a {
 #current-temp {
   font-size: 50px;
   color: #fe7143;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+#current-deg {
+  font-size: 40px;
+  color: #fe7143;
+  font-weight: 200;
 }
 
 .dateTime {
