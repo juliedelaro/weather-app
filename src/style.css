@@ -34,11 +34,12 @@ a {
   text-decoration: none;
 }
 
-.sunny {
+#description {
   color: #fe7143;
   font-size: 20px;
   font-weight: 300;
   line-height: 20px;
+  text-transform: capitalize;
 }
 
 .currentTitle {
@@ -118,8 +119,9 @@ a {
 #current-location-button {
   border: 2px solid #44a6f5;
   color: #44a6f5;
+  padding: 5px;
 }
 
-small {
-  padding-top: 30px;
+footer {
+  text-align: center;
 }

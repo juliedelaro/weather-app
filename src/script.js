@@ -1,41 +1,3 @@
-// let weather = {
-//   paris: {
-//     temp: 19.7,
-//     humidity: 80,
-//   },
-//   tokyo: {
-//     temp: 17.3,
-//     humidity: 50,
-//   },
-//   lisbon: {
-//     temp: 30.2,
-//     humidity: 20,
-//   },
-//   "san francisco": {
-//     temp: 20.9,
-//     humidity: 100,
-//   },
-//   moscow: {
-//     temp: -5,
-//     humidity: 20,
-//   },
-// };
-
-// // write your code here
-// let city = prompt("Enter a city");
-// city = city.toLowerCase();
-// if (weather[city] !== undefined) {
-//   let celsius = Math.round(weather[city].temp);
-//   let farenheit = Math.round((weather[city].temp * 9) / 5 + 32);
-//   alert(
-//     `It is currently ${celsius} °C (${farenheit} °F) in ${city} with a humidity of ${weather[city].humidity}%`
-//   );
-// } else {
-//   alert(
-//     `Sorry, we do not know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-//   );
-// }
-
 let date = new Date();
 let hour = date.getHours();
 let minutes = date.getMinutes();
@@ -51,14 +13,8 @@ let days = [
 ];
 
 let day = days[date.getDay()];
-console.log(day);
 let currentDateTime = document.querySelector(".dateTime");
 currentDateTime.innerHTML = `${day}, ${hour}:${minutes}`;
-
-// 👨‍🏫Your task
-// On your project, when a user searches for a city (example: New York),
-// it should display the name of the city on the result page and the
-// current temperature of the city.
 
 function displayWeather(response) {
   document.querySelector(".citySearch").innerHTML = response.data.name;
@@ -72,6 +28,13 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(event) {

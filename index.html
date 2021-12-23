@@ -48,16 +48,16 @@
           <h2 class="currentTitle">Currently:</h2>
       <div class="currentWeather">
  <span id="current-temp">80&deg;</span>
-          <span class="currentEmoji">🌤</span><a href="#" id="farenheit"><sup>F&deg;</a></span><sup>|</sup><a href = "#" id= "celsius"><sup>C&deg;</sup></a></li>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear" id="icon" class="float-left" width="80" /><a href="#" id="farenheit"><sup>F&deg;</a></span><sup>|</sup><a href = "#" id= "celsius"><sup>C&deg;</sup></a></li>
           </div>
           <ul class="currentConditions"></ul>
-          <li class="sunny">Mostly Sunny</li>
+          <li><span id="description"></span></li>
           <li>Humidity: <span id="current-humidty">66</span>%</li>
           <li>Wind Speed: <span id="wind-speed">6</span> mph</li>
-          <li><span id="description"></span></li>
+          
             </ul>
         </div>
-        <small><a href="https://github.com/juliedelaro/weather-app" target="_blank">Open-source code</a>, by Julie De La Rosa</small>
+  
   </div>
 </div>
 
@@ -92,6 +92,9 @@
 </ul>
 </div>
     </section>
+<footer>
+        <small><a href="https://github.com/juliedelaro/weather-app" target="_blank">Open-source code</a> by Julie De La Rosa</small>
+</footer>
     <script src="src/script.js"></script>
   </body>
 </html>
