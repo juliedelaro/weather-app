@@ -16,6 +16,21 @@ let day = days[date.getDay()];
 let currentDateTime = document.querySelector(".dateTime");
 currentDateTime.innerHTML = `${day}, ${hour}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col"><li class="futureDays">${day}</li><span class="emoji">☀️</span></div>
+      <div class="col"><span class= futureHigh>68&deg;</span><span class="futureLow">/46&deg;</span></div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML + `</div>`;
+}
+
 function displayWeather(response) {
   document.querySelector(".citySearch").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
@@ -105,3 +120,5 @@ celsiusLink.addEventListener("click", showCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showfahrenheit);
+
+displayForecast();
