@@ -94,7 +94,8 @@ let farenheitTemp = null;
 
 function showFarenheit(event) {
   event.preventDefault();
-  currentTemp.innerHTML = "80°";
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(farenheitTemp);
 }
 
 let currentTemp = document.querySelector("#current-temp");
