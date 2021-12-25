@@ -76,8 +76,6 @@ function displayWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  fahrenheitTemp = response.data.main.temp;
-
   getForecast(response.data.coord);
 }
 
@@ -125,25 +123,4 @@ currentLocationButton.addEventListener("click", retrievePosition);
 let form = document.querySelector("form");
 form.addEventListener("submit", search);
 
-function showCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  let celsiusTemp = (fahrenheitTemp - 32) * (5 / 9);
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let fahrenheitTemp = null;
-
-function showfahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temp");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
 let currentTemp = document.querySelector("#current-temp");
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showfahrenheit);
