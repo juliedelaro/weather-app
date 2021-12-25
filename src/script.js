@@ -79,14 +79,16 @@ function displayWeather(response) {
   getForecast(response.data.coord);
 }
 
-function search(event) {
+function search(city) {
+  let apiKey = "80eaf0f2f7c0ac14a85fb2a01d28b5a7";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function handleSubmit(event) {
   event.preventDefault();
   let input = document.querySelector("#city");
-  document.querySelector(".citySearch").value;
-
-  let apiKey = "80eaf0f2f7c0ac14a85fb2a01d28b5a7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayWeather);
+  search(input.value);
 }
 
 function showCurrentWeather(response) {
@@ -121,6 +123,8 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", retrievePosition);
 
 let form = document.querySelector("form");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
 
 let currentTemp = document.querySelector("#current-temp");
+
+search("New York");
