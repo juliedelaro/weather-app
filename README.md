@@ -1,1 +1,1 @@
-# weather-app final project for my SheCodes Plus certification.
+weather-app final project for my SheCodes Plus certification.
