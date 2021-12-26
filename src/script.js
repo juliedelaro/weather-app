@@ -60,6 +60,9 @@ function displayWeather(response) {
   document.querySelector("#current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#real-feel").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector("#current-humidty").innerHTML =
     response.data.main.humidity;
   document.querySelector("#wind-speed").innerHTML = Math.round(
@@ -76,6 +79,7 @@ function displayWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
+  console.log(response.data);
 }
 
 function search(city) {
